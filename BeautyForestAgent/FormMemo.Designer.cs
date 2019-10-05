@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Status = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabMode = new System.Windows.Forms.TabControl();
             this.tpRead = new System.Windows.Forms.TabPage();
             this.btnLoadFile = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.btnSaveFileSelect = new System.Windows.Forms.Button();
             this.loadFileDlg = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Status.SuspendLayout();
             this.tabMode.SuspendLayout();
             this.tpRead.SuspendLayout();
@@ -58,6 +58,12 @@
             this.Status.Size = new System.Drawing.Size(485, 22);
             this.Status.TabIndex = 0;
             this.Status.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(172, 17);
+            this.toolStripStatusLabel1.Text = "3101 강한나  - 파일 읽고 쓰기";
             // 
             // tabMode
             // 
@@ -92,6 +98,7 @@
             this.btnLoadFile.TabIndex = 3;
             this.btnLoadFile.Text = "불러오기";
             this.btnLoadFile.UseVisualStyleBackColor = true;
+            this.btnLoadFile.Click += new System.EventHandler(this.BtnLoadFile_Click);
             // 
             // btnLoadFileSelect
             // 
@@ -101,6 +108,7 @@
             this.btnLoadFileSelect.TabIndex = 2;
             this.btnLoadFileSelect.Text = "파일 선택";
             this.btnLoadFileSelect.UseVisualStyleBackColor = true;
+            this.btnLoadFileSelect.Click += new System.EventHandler(this.BtnLoadFileSelect_Click);
             // 
             // txtLoadText
             // 
@@ -159,6 +167,7 @@
             this.btnSaveFile.TabIndex = 1;
             this.btnSaveFile.Text = "저장하기";
             this.btnSaveFile.UseVisualStyleBackColor = true;
+            this.btnSaveFile.Click += new System.EventHandler(this.BtnSaveFile_Click);
             // 
             // btnSaveFileSelect
             // 
@@ -168,6 +177,7 @@
             this.btnSaveFileSelect.TabIndex = 0;
             this.btnSaveFileSelect.Text = "파일 선택";
             this.btnSaveFileSelect.UseVisualStyleBackColor = true;
+            this.btnSaveFileSelect.Click += new System.EventHandler(this.BtnSaveFileSelect_Click);
             // 
             // loadFileDlg
             // 
@@ -177,12 +187,6 @@
             // saveFileDlg
             // 
             this.saveFileDlg.Filter = "텍스트 파일(*.txt)|*.txt";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(172, 17);
-            this.toolStripStatusLabel1.Text = "3101 강한나  - 파일 읽고 쓰기";
             // 
             // FormMemo
             // 
